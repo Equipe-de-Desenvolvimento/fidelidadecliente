@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="pt-BR" >
     <head>
-        <title>STG - CLINICAS v1.0</title>
+        <title>STG - CLIENTE v1.0</title>
         <meta http-equiv="Content-Style-Type" content="text/css" />
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <link href="<?= base_url() ?>css/reset.css" rel="stylesheet" type="text/css" />
@@ -17,7 +17,7 @@
             <div id="imglogo">
                 <img src="<?= base_url(); ?>img/stg - logo.jpg" alt="Logo"
                      title="Logo" height="70" id="Insert_logo"/>
-                <div id="sis_info">SISTEMA DE GESTAO DE CLINICAS - v1.0</div>
+                <div id="sis_info">SISTEMA DE GESTAO - v1.0</div>
             </div>
         </div>
 
@@ -35,11 +35,11 @@
                 <h2>Login</h2>
                 <form name="form_login" id="form_login" action="<?= base_url() ?>login/autenticar"
                       method="post">
-                    <label id="labelUsuario">Usu&aacute;rio</label>
+                    <label id="labelUsuario">CPF</label>
                     <input type="text" id="txtLogin" name="txtLogin" class="texto05" value="<?= @$obj->_login; ?>" />
                     <label id="labelSenha">Senha</label>
                     <input type="password" id="txtSenha" name="txtSenha"  class="texto05" value="<?= @$obj->_senha; ?>" />
-                    <label id="labelSenha">Empresa</label>
+<!--                    <label id="labelSenha"></label>
                     <select  name="txtempresa" id="txtempresa" class="size06" >
                         <?if (count($empresa)> 1){?>
                         <option value="">Selecione</option>
@@ -47,10 +47,16 @@
                         <? foreach ($empresa as $item) : ?>
                             <option value="<?= $item->empresa_id; ?>"><?= $item->nome; ?></option>
                                 <? endforeach; ?>
-                    </select>
+                    </select>-->
                     <div class="buttons">
                         <button type="submit" name="btnEnviar">Login</button>
-                        <button type="reset" name="btnLimpar">Limpar</button>
+                        <button type="reset" name="btnLimpar">Cadastrar</button>
+                        <br>
+                            <a style="color: white;" href="<?= base_url() ?>login/esqueciminhasenha">  Esqueceu sua senha? Clique aqui</a>
+                    </div>
+                    <div>
+                        <!--<button type="submit" name="btnEnviar">Login</button>-->
+                        <!--<button type="reset" name="btnLimpar">Cadastrar</button>-->
                     </div>
                 </form>
 
